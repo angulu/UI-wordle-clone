@@ -1,0 +1,107 @@
+:root {
+  --tile-width: 55px;
+  --button-width: 45px;
+  --button-height: 60px;
+  --white: #fff;
+  --black: #121213;
+  --yellow: #b59f3b;
+  --green: #528d4e;
+  --grey: #3a393d;
+  --light-grey: #818384;
+  --lighter-grey: #a7a9ab;
+  --border-transparent: 2px solid transparent;
+}
+
+body {
+  margin: 0px;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px 10px;
+  background-color: var(--black);
+  height: 100vh;
+  color: var(--white);
+}
+
+p {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.board,
+.keyboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.board {
+  width: calc(var(--tile-width) * 6);
+  gap: 5px 5px;
+}
+
+.keyboard {
+  width: calc(var(--button-width) * 12);
+  gap: 8px 8px;
+}
+
+.filler {
+  width: calc(var(--button-width) * 0.5);
+  visibility: hidden;
+}
+
+.enter,
+.clear {
+  width: calc(var(--button-width) * 1.5);
+  text-transform: uppercase;
+}
+
+.tile {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: var(--tile-width);
+  width: var(--tile-width);
+  height: var(--tile-width);
+}
+
+.tile:empty {
+  border: 2px solid var(--grey);
+}
+
+.tile.letter {
+  border: 2px solid var(--light-grey);
+}
+
+button {
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--light-grey);
+  border: var(--border-transparent);
+  border-radius: 5px;
+  width: var(--button-width);
+  height: var(--button-height);
+  text-transform: capitalize;
+}
+
+.absolute {
+  background-color: var(--green);
+  border: var(--border-transparent) !important;
+}
+
+.relative {
+  background-color: var(--yellow);
+  border: var(--border-transparent) !important;
+}
+
+.none {
+  background-color: var(--grey);
+  border: var(--border-transparent) !important;
+}
